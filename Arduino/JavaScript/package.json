@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "blinky": "node blinky.js",
+	"controller": "node controller.js",
+	"servo": "node servo.js",
+	"servo-continuous": "node servo-continuous.js"
+  },
+  "author": "Daniel Beus",
+  "license": "ISC",
+  "dependencies": {
+    "johnny-five": "^1.0.0",
+    "keypress": "^0.2.1",
+    "serialport": "^7.1.4"
+  }
+}
