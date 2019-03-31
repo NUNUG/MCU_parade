@@ -8,23 +8,29 @@ board.on('ready', function () {
 	const motor = new five.Motor({
 		pin: 3
 	});
-	// const motion = new five.Motion({
-
-	// });
+	const potentiometer = new five.Sensor({
+		pin: "A7",
+		freq: 250
+	});
 
 	button.on('down', function() {
 		led.on();
 	});
 
 	button.on('hold', function() {
-		led.blink(500);
-		motor.start(255);
+		led.blink(potentiometer.value);
+		motor.start(potentiometer.value / 4);
+		servo.to((180/1024) * potentiometer.value);
 	});
 
 	button.on('up', function() {
 		led.stop().off();
 		motor.stop();
 	});
+
+	// potentiometer.on('data', function () {
+	// 	potReading = this.value;
+	// });
 
 	this.repl.inject({
 		led: {
