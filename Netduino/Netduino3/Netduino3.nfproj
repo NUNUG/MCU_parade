@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <NanoFrameworkProjectSystemPath>$(MSBuildToolsPath)..\..\..\nanoFramework\v1.0\</NanoFrameworkProjectSystemPath>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{11A8DD76-328B-46DF-9F39-F559912D0360};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>6b3f194d-cec5-4c14-a1b5-9dc706386e19</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>Netduino3</RootNamespace>
+    <AssemblyName>Netduino3</AssemblyName>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Graphics">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.Hardware">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.Hardware.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.Hardware.PWM">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.Hardware.PWM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.Hardware.SerialPort">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.Hardware.SerialPort.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.IO">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.Native">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.Net">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.TinyCore">
+      <HintPath>C:\Program Files (x86)\Microsoft .NET Micro Framework\v4.3\Assemblies\be\Microsoft.SPOT.TinyCore.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib, Version=1.1.1.7, Culture=neutral, PublicKeyToken=c07d481e9758c731">
+      <HintPath>..\packages\nanoFramework.CoreLibrary.1.1.1\lib\mscorlib.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="NetduinoExtensions">
+      <HintPath>C:\Program Files (x86)\Secret Labs\Netduino SDK\Assemblies\v4.3\NetduinoExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SecretLabs.NETMF.Hardware">
+      <HintPath>C:\Program Files (x86)\Secret Labs\Netduino SDK\Assemblies\v4.3\SecretLabs.NETMF.Hardware.dll</HintPath>
+    </Reference>
+    <Reference Include="SecretLabs.NETMF.Hardware.AnalogInput">
+      <HintPath>C:\Program Files (x86)\Secret Labs\Netduino SDK\Assemblies\v4.3\SecretLabs.NETMF.Hardware.AnalogInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SecretLabs.NETMF.Hardware.Netduino">
+      <HintPath>C:\Program Files (x86)\Secret Labs\Netduino SDK\Assemblies\v4.3\SecretLabs.NETMF.Hardware.Netduino.dll</HintPath>
+    </Reference>
+    <Reference Include="SecretLabs.NETMF.Hardware.PWM">
+      <HintPath>C:\Program Files (x86)\Secret Labs\Netduino SDK\Assemblies\v4.3\SecretLabs.NETMF.Hardware.PWM.dll</HintPath>
+    </Reference>
+    <Reference Include="SecretLabs.NETMF.IO">
+      <HintPath>C:\Program Files (x86)\Secret Labs\Netduino SDK\Assemblies\v4.3\SecretLabs.NETMF.IO.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.CSharp.targets')" />
+  <ProjectExtensions>
+    <ProjectCapabilities>
+      <ProjectConfigurationsDeclaredAsItems />
+    </ProjectCapabilities>
+  </ProjectExtensions>
+</Project>
